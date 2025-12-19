@@ -20,15 +20,11 @@ stages:
         provider: 'azurerm'
         command: 'init'
         backendServiceArm: 'AvneshS'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment'
         backendAzureRmStorageAccountName: 'avneshst'
         backendAzureRmContainerName: 'avneshct'
         backendAzureRmKey: 'terraform.tfstate'
 
-    - task: TerraformTask@5
-      inputs:
-        provider: 'azurerm'
-        command: 'plan'
-        environmentServiceNameAzureRM: 'AvneshS'
 
     - task: TerraformTask@5
       inputs:

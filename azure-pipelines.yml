@@ -20,7 +20,7 @@ stages:
         provider: 'azurerm'
         command: 'init'
         backendServiceArm: 'AvneshS'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/environment'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
         backendAzureRmStorageAccountName: 'avneshst'
         backendAzureRmContainerName: 'avneshct'
         backendAzureRmKey: 'terraform.tfstate'
@@ -30,7 +30,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'plan'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/environment'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
         environmentServiceNameAzureRM: 'AvneshS'
 
     

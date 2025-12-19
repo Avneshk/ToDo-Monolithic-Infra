@@ -1,6 +1,5 @@
 trigger:
 - main
-- feature/*
 
 pool: AvneshPool
 
@@ -8,7 +7,7 @@ stages:
 - stage: Terraformtodo
   displayName: Terraformtodo
   jobs:
-  - job: terraforminit_plan
+  - job: terraform_init_plan
     displayName: Terraform Init & Plan
     steps:
     - task: TerraformInstaller@1

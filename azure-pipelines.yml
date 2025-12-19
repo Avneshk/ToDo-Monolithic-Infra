@@ -30,4 +30,11 @@ stages:
         command: 'plan'
         environmentServiceNameAzureRM: 'AvneshS'
 
+    - task: TerraformTask@5
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+        environmentServiceNameAzureRM: 'AvneshS'
+
     
